@@ -1,103 +1,73 @@
-<!DOCTYPE html>
-<html lang="en">
+<header>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="../public/css/style.css">
-    <link href="https://fonts.googleapis.com/css?family=Kodchasan" rel="stylesheet">
+    <div class="row">
+        <div class="col-lg-4">
 
-    <title>News Scraper</title>
-</head>
+            <img class="logo" src="https://media.giphy.com/media/8G7KH4VvaBig/giphy.gif">
+            <a href="index.html">
+                <h1 class="NS">News Scraper</h1>
+            </a>
 
-<body>
-    <header>
+        </div>
 
-        <div class="row">
-            <div class="col-lg-4">
+        <div class="col-lg-8">
 
-                <img class="logo" src="https://media.giphy.com/media/8G7KH4VvaBig/giphy.gif">
-                <a href="index.html">
-                    <h1 class="NS">News Scraper</h1>
-                </a>
-
-            </div>
-
-            <div class="col-lg-8">
-
-
-
-            </div>
 
 
         </div>
 
-    </header>
-    <br><br><br><br><br>
 
-    <button class="scrape">| Scrape New Articles |</button>
+    </div>
 
-    <a href="saved.html"><button class='savedA'>| View Saved Articles
-            |</button></a>
+</header>
+<br><br><br><br><br>
+
+<button class="scrape">| Scrape New Articles |</button>
+
+<a href="saved.handlebars"><button class='savedA'>| View Saved Articles
+        |</button></a>
+<br><br>
+
+<div class="container" id="topBox">
+    <div class="row">
+        <div class="col-md-12">
+
+            <h6 class="welcome">Welcome To</h6>
+
+            <h1 class="title">News Scraper</h1>
+            <hr>
+            <br>
+            <h4 class="webApp">A web app that lets users view and leave comments on the latest news</h4>
             <br><br>
 
-    <div class="container" id="topBox">
-        <div class="row">
-            <div class="col-md-12">
-
-                <h6 class="welcome">Welcome To</h6>
-
-                <h1 class="title">News Scraper</h1>
-                <hr>
-                <br>
-                <h4 class="webApp">A web app that lets users view and leave comments on the latest news</h4>
-                <br><br>
-
-            </div>
-        </div>
-
-    </div>
-
-    <br>
-    <div class="container">
-        <hr>
-    </div>
-
-    <br><br>
-
-    <div class="container" id="newsCont">
-        <div class="row">
-            <div class="col-md-12">
-                <h1>News Headline 1</h1>
-                <hr>
-                
-            </div>
-            <div class="col-md-12">
-                <p class="story1">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                    exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
-                    irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-                    pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
-                    deserunt mollit anim id est laborum.
-
-                    <br><br>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                    exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
-                    irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-                    pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
-                    deserunt mollit anim id est laborum.</p>
-            </div>
         </div>
     </div>
-    <div class="container">
-        <hr>
-    </div>
-   
-    
+
+</div>
+
+<br>
+<div class="container">
+    <hr>
+</div>
+
+<br><br>
+
+<div class="container" id="newsCont">
+
+    <h1>Headline 1</h1>
+    <hr>
+
+
+
+    <p class="story1">{{sdfg}}</p>
+
+
+</div>
+<div class="container">
+    <hr>
+</div>
+
+
 </body>
 
 </html>
