@@ -24,44 +24,55 @@ mongoose.connect("mongodb://localhost/News-Scraper", { useNewUrlParser: true });
 
 
 app.get("/scrape", function (req, res) {
-    // First, we grab the body of the html with axios
-    axios.get("https://news.ycombinator.com/").then(function (response) {
-        // Then, we load that into cheerio and save it to $ for a shorthand selector
-        var $ = cheerio.load(response.data);
+    axios.get("https://www.pbs.org/wgbh/americanexperience/features/worlds-timeline-worlds/").then(response => {
+        const $ = cheerio.load(response.data);
+        const articles = [];
 
-        // Now, we grab every h2 within an article tag, and do the following:
-        $(".storylink").each(function (i, element) {
-            // Save an empty result object
-            var result = {};
+        $("p").each((i, element) => {
+            const article = {};
 
-            // <a href="https://github.com/SerenityOS/serenity" class="storylink">
-            //     SerenityOS – a graphical Unix-like OS for x86, with 90s aesthetics</a>
+            let date = element.children
+                .find(child => child.name === 'strong');
 
+            if (date && date.children && date.children[0] && date.children[0].data) {
+                date = date.children[0].data;
+            } else {
+                date = undefined;
+            }
 
-            // Add the text and href of every link, and save them as properties of the result object
-            result.title = $(this)
-                .text();
-            result.link = $(this)
-                .attr("href");
+            let text = element.children
+                .find(child => child.type === 'text');
 
-            // Create a new Article using the `result` object built from scraping
-            db.Article.create(result)
-                .then(function (dbArticle) {
-                    // View the added result in the console
-                    console.log(dbArticle);
-                })
-                .catch(function (err) {
-                    // If an error occurred, log it
-                    console.log(err);
-                });
+            if (text && text.data) {
+                text = text.data;
+            } else {
+                text = undefined;
+            }
+
+            if (date && text) {
+                article.date = date;
+                article.text = text.replace(/\\n/g, '');
+
+                articles.push(article);
+            }
         });
 
-        // Send a message to the client
-        res.send("Scrape Complete");
+        if (articles.length) {
+            res.json(articles);
+        } else {
+            res.send('no articles found');
+        }
+
+
     });
 });
 
-
+  // this is how you'll save an article:
+        // db.Article.create(article)
+        //   .then(dbArticle => {
+        //     res.send("Added to favorites");
+        //   })
+        //   .catch(err => console.log(err));
 
 
 

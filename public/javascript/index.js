@@ -1,5 +1,11 @@
 $(document).ready(function () {
     getArticles();
+
+    $('#leaveComment').click(showCommentInput);
+    $('#viewComments').click(showCommentArea);
+    $('.submitButt').click(displayComment);
+
+
 });
 
 function getArticles() {
@@ -7,13 +13,13 @@ function getArticles() {
 }
 
 
-$('leaveComment').click(showCommentInput);
+
 
 
 function showCommentInput() {
-    var html = `<input class="commentInput"><button class="submitButt" type="submit">Submit</button>`;
 
-    $('commentInput').html(html);
+    $('#commentInput').show(1500);
+    console.log('hello');
 }
 
 
@@ -33,4 +39,7 @@ function showCommentArea() {
 };
 
 
-$('#viewComments').click(showCommentArea);
+
+function displayComment() {
+    $('')
+};
