@@ -114,6 +114,7 @@ hr {
 .story1 {
     padding: 20px;
     font-size: 35px;
+    font-weight: bold;
 }
 
  .home {
@@ -194,7 +195,7 @@ hr {
 
 .underHR {
     height: 2px;
-    width: 1300px;
+    width: 2300px;
 }
 
 .comment {
@@ -215,6 +216,11 @@ hr {
     height: 2px;
 }
 
+.HLhr2 {
+    height: 1px;
+}
+
+
 .saveButt {
     
         cursor: crosshair;
@@ -223,7 +229,20 @@ hr {
        font-weight: bold;
        float: right;
        
+       
     }
+
+    .saveButt2 {
+    
+        cursor: crosshair;
+        font-size: 25px;
+        background-image: url("https://i.pinimg.com/originals/dc/c3/09/dcc30928f7de36cb88eeba49122cac3a.jpg");
+       font-weight: bold;
+       float: right;
+       margin-bottom: 10px;
+       
+    }
+
 
     .commentInput {
         background-image: url("https://i.pinimg.com/originals/dc/c3/09/dcc30928f7de36cb88eeba49122cac3a.jpg");
