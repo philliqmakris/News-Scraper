@@ -66,6 +66,7 @@ body {
     
 }
 
+
 .image {
     height:500px;
     width: 1100px;
@@ -112,7 +113,7 @@ hr {
 
 .story1 {
     padding: 20px;
-    font-size: 30px;
+    font-size: 35px;
 }
 
  .home {
@@ -173,9 +174,9 @@ hr {
 
 }
 
-.head {
-    background-color: rgba(255, 255, 255, 0.384);
-}
+/* .head {
+    background-color: rgba(0, 0, 0, 0.384);
+} */
 
 .titleHR {
     background-color: rgb(0, 0, 0);
@@ -192,7 +193,65 @@ hr {
 }
 
 .underHR {
-    height: 1px;
+    height: 2px;
     width: 1300px;
 }
+
+.comment {
+    cursor: crosshair;
+    font-size: 25px;
+    background-image: url("https://i.pinimg.com/originals/dc/c3/09/dcc30928f7de36cb88eeba49122cac3a.jpg");
+   font-weight: bold;
+   
+}
+
+.headline {
+    font-weight: bold;
+    font-size: 50px;
+    
+}
+
+.HLhr {
+    height: 2px;
+}
+
+.saveButt {
+    
+        cursor: crosshair;
+        font-size: 25px;
+        background-image: url("https://i.pinimg.com/originals/dc/c3/09/dcc30928f7de36cb88eeba49122cac3a.jpg");
+       font-weight: bold;
+       float: right;
+       
+    }
+
+    .commentInput {
+        background-image: url("https://i.pinimg.com/originals/dc/c3/09/dcc30928f7de36cb88eeba49122cac3a.jpg");
+        font-size: 25px;
+        font-weight: bold;
+        border-style: solid;
+        border-color: rgba(0, 0, 0, 0.384);
+        margin-left: 10px;
+    }
+
+    .submitButt {
+        font-size: 25px;
+        background-image: url("https://i.pinimg.com/originals/dc/c3/09/dcc30928f7de36cb88eeba49122cac3a.jpg");
+        font-weight: bold;
+        margin-left: 10px;
+    }
+
+
+.commentTitle {
+    text-align: center;
+    font-size: 45px;
+    font-weight:bold;
+}
+
+.userComment {
+    font-size: 30px;
+    
+}
+    
+
 
