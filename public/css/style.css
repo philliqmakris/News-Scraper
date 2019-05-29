@@ -278,6 +278,17 @@ hr {
 #commentInput {
     display: none;
 }
+
+#commentArea {
+    display: none;
+}
+
+#closeComments {
+    font-size: 18px;
+        background-image: url("https://i.pinimg.com/originals/dc/c3/09/dcc30928f7de36cb88eeba49122cac3a.jpg");
+       font-weight: bold;
+       float: right;
+}
     
 
 

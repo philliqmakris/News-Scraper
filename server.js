@@ -23,6 +23,8 @@ app.use(express.static("public"));
 mongoose.connect("mongodb://localhost/News-Scraper", { useNewUrlParser: true });
 
 
+
+
 app.get("/scrape", function (req, res) {
     axios.get("https://www.pbs.org/wgbh/americanexperience/features/worlds-timeline-worlds/").then(response => {
         const $ = cheerio.load(response.data);
