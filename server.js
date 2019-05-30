@@ -34,8 +34,7 @@ app.get("/scrape", function (req, res) {
         $("p").each((i, element) => {
             const article = {};
 
-            let date = element.children
-                .find(child => child.name === 'strong');
+            let date = element.children.find(child => child.name === 'strong');
 
             if (date && date.children && date.children[0] && date.children[0].data) {
                 date = date.children[0].data;
@@ -43,8 +42,7 @@ app.get("/scrape", function (req, res) {
                 date = undefined;
             }
 
-            let text = element.children
-                .find(child => child.type === 'text');
+            let text = element.children.find(child => child.type === 'text');
 
             if (text && text.data) {
                 text = text.data;

@@ -187,13 +187,68 @@ hr {
 .webAppHR {
     background-color: rgb(0, 0, 0);
     
-    height: 1px;
+    height:1px;
     width: 300px;
 }
 
 .underHR {
-    height: 2px;
+    height: 1px;
     width: 2300px;
+}
+
+.underHR1 {
+    height: 1px;
+    width: 1800px;
+}
+
+.underHR2 {
+    height: 1px;
+    width: 1300px;
+}
+
+.underHR3 {
+    height: 1px;
+    width: 800px;
+}
+
+.underHR4 {
+    height: 1px;
+    width: 600px;
+}
+
+.underHR5 {
+    height: 1px;
+    width: 400px;
+}
+
+.underHR6 {
+    height: 1px;
+    width: 220px;
+}
+
+.underHR7 {
+    height: 1px;
+    width: 180px;
+}
+
+.underHR8 {
+    height: 1px;
+    width: 120px;
+}
+
+.underHR9 {
+    height: 1px;
+    width: 90px;
+}
+
+.underHR10 {
+    height: 1px;
+    width: 60px;
+}
+
+.underHR11 {
+    height: 1px;
+    width: 30px;
 }
 
 .comment {

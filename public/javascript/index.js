@@ -3,12 +3,38 @@ $(document).ready(function () {
     $('#leaveComment').click(showCommentInput);
     $('#viewComments').click(showCommentArea);
     $('.submitButt').click(displayComment);
-
+    grabData();
 
 
 });
 
 
+function grabData() {
+    $.ajax({
+        url: '/scrape',
+        method: "GET"
+    }).then(function (response) {
+        // console.log(response);
+        response.forEach(element => {
+            console.log(element);
+            var myPar = $('<p>');
+
+            myPar.text = element.text;
+
+            var myDate = $('<h1>');
+
+            myDate.text = element.text;
+
+            //created para element, then set text equal to the elements text.
+            //next create another element and set element date to that
+            //then append them to the page
+            //dynamically create all html elements
+
+
+        });
+
+    });
+};
 
 
 function showCommentInput() {
@@ -35,17 +61,17 @@ function displayComment() {
 
 };
 
+
+
 //to populate html with scraped data use jquery plus a for loop to get scraped data
-var scrapedData = 
-for (i = 0; i < scrapedData.length; i++) {
-    
-    $('.headline').append(date);
+// var scrapedData = 
+// for (i = 0; i < scrapedData.length; i++) {
 
-    $('.story1').append(article);
+//     $('.headline').append(date);
 
-}
+//     $('.story1').append(article);
 
-
+// }
 
 
 
@@ -54,41 +80,5 @@ for (i = 0; i < scrapedData.length; i++) {
 
 
 
-var html = `<div class="container" id="newsCont">
-    <h1 class="headline"></h1>
-    
-    <hr class="HLhr">
-    
-    <button class="saveButt2">| Save Article |</button>
 
-    <p class="story1"></p>
-
-    <button id="leaveComment" class="comment">| Write a Comment |</button>
-    
-    <span id="commentInput">
-    
-    <input class="commentInput"><button onclick='showCommentArea()' class="submitButt" type="submit">Submit</button>
-    
-    </span>
-    
-    <button id="viewComments" class="saveButt">| View Comment |</button>
-
-    <br><br>
-    
-    <div id="commentArea">
-        
-    <span>
-
-        <h1 class="commentTitle"><u>Comments</u></h1>
-
-    </span>
-        
-    <p class="userComment"></p>
-
-    <hr>
-    
-    </div>
-
-    </div>
-`;
 
