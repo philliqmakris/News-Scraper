@@ -14,21 +14,35 @@ function grabData() {
         url: '/scrape',
         method: "GET"
     }).then(function (response) {
-        // console.log(response);
         response.forEach(element => {
+
+            let mainDiv = $('<div>').attr('class', 'container').attr('id', 'newsCont');
+            let h1 = $('<h1>').attr('class', 'headline').text(element.date);
+            let hr = $('<hr>').attr('class', 'HLhr');
+            let button = $('<button>').attr('class', 'saveButt2');
+            let paragraph = $('<p>').attr('class', 'story1').text(element.text);
+            let button2 = $('<button>').attr('class', 'comment');
+            let span = $('<span>').attr('id', 'commentInput');
+            let input = $('<input').attr('class', 'commentInput');
+            let br = $('<br>');
+            let br2 = $('<br>');
+            let commentDiv = $('<div>').attr('id', 'commentArea');
+            let span2 = $('<span>');
+            let commentTitle = $('<h1>').attr('class', 'commentTitle');
+            let userComment = $('<p>').attr('class', 'userComment');
+            let hr2 = $('<hr>');
+            let br1 = $('<br>');
+            let hr3 = $('<hr>').attr('class', 'underCommentsHR');
+            
             console.log(element);
-            var myPar = $('<p>');
-
-            myPar.text = element.text;
-
-            var myDate = $('<h1>');
-
-            myDate.text = element.text;
-
+            span2.append(commentTitle, $('<u>').text('Comments'));
+            commentDiv.append(span2);
+            $('#holder').append(mainDiv);
             //created para element, then set text equal to the elements text.
             //next create another element and set element date to that
             //then append them to the page
             //dynamically create all html elements
+
 
 
         });
