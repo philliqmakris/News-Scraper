@@ -10,7 +10,7 @@ var app = express();
 app.engine('handlebars', exphbs({ defaultlayout: 'main' }));
 app.set('view engine', 'handlebars');
 
-var port = 3000;
+var port = process.env.PORT || 3000;
 app.listen(port, () => console.log('listening on port 3000'));
 
 app.get('/', function (req, res) {
